@@ -18,8 +18,8 @@
 		<bean id="myCricketCoach" class="com.om.springdemo.CricketCoach">
 		<!-- set up setter injection -->
 		<property name="fortuneService" ref="myFortuneService" />
-		<property name="emailAddress" value="somecoach@aioli.com" />
-		<property name="team" value="Sunrisers" />
+		<property name="emailAddress" value="${foo.email}" />
+		<property name="team" value="${foo.team}" />
 	</bean>
 	<bean id="myLoggerConfig" class="com.om.springdemo.MyLoggerConfig" init-method="initLogger">
 		<property name="rootLoggerLevel" value="FINE" />
